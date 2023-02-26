@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>66153dab-7589-40d5-b4fe-f22b61e2236d</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Blazorise.DataGrid" />
+    <None Remove="Blazorise.Bootstrap" />
+    <None Remove="Blazorise.Icons.FontAwesome" />
+    <None Remove="Blazored.LocalStorage" />
+    <None Remove="Blazored.LocalStorage.TestExtensions" />
+    <None Remove="Factories\" />
+    <None Remove="Blazored.Modal" />
+    <None Remove="Modals\" />
+    <None Remove="UIThemeClasses\" />
+    <None Remove="ITab\" />
+    <None Remove="Microsoft.Extensions.Localization" />
+    <None Remove="Pages\Controllers\" />
+    <None Remove="Composants\" />
+    <None Remove="BlazorGrid" />
+    <None Remove="BlazorTable" />
+    <None Remove="SmartishTable" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="Factories\" />
+    <Folder Include="Modals\" />
+    <Folder Include="UIThemeClasses\" />
+    <Folder Include="ITab\" />
+    <Folder Include="Pages\Controllers\" />
+    <Folder Include="Composants\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Blazorise.DataGrid" Version="1.1.5" />
+    <PackageReference Include="Blazorise.Bootstrap" Version="1.1.5" />
+    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.1.5" />
+    <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />
+    <PackageReference Include="Blazored.LocalStorage.TestExtensions" Version="4.3.0" />
+    <PackageReference Include="Blazored.Modal" Version="7.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.2" />
+    <PackageReference Include="BlazorGrid" Version="1.1.0" />
+    <PackageReference Include="SmartishTable" Version="1.1.0" />
+    <PackageReference Include="BlazorTable" Version="1.17.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\" />
+  </ItemGroup>
+</Project>

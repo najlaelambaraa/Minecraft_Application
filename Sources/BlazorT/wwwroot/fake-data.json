@@ -1,0 +1,318 @@
+﻿[
+  {
+    "id": 1,
+    "displayname": "Cinesanct",
+    "name": "cinesanct",
+    "stacksize": 50,
+    "maxdurability": 58,
+    "enchantcategories": [],
+    "repairwith": [
+      "spruce_planks"
+    ],
+    "createddate": "2020-11-20",
+    "updateddate": "2014-11-07"
+  },
+  {
+    "id": 2,
+    "displayname": "Nixelt",
+    "name": "nixelt",
+    "stacksize": 26,
+    "maxdurability": 123,
+    "enchantcategories": [
+      "armor_chest",
+      "weapon"
+    ],
+    "repairwith": [],
+    "createddate": "2022-10-02",
+    "updateddate": "2019-10-01"
+  },
+  {
+    "id": 3,
+    "displayname": "Digique",
+    "name": "digique",
+    "stacksize": 32,
+    "maxdurability": 32,
+    "enchantcategories": [],
+    "repairwith": [
+      "jungle_planks",
+      "spruce_planks"
+    ],
+    "createddate": "2022-10-09",
+    "updateddate": "2014-01-27"
+  },
+  {
+    "id": 4,
+    "displayname": "Sensate",
+    "name": "sensate",
+    "stacksize": 38,
+    "maxdurability": 81,
+    "enchantcategories": [],
+    "repairwith": [],
+    "createddate": "2014-12-10",
+    "updateddate": "2017-10-25"
+  },
+  {
+    "id": 5,
+    "displayname": "Proflex",
+    "name": "proflex",
+    "stacksize": 27,
+    "maxdurability": 41,
+    "enchantcategories": [
+      "armor_chest",
+      "weapon",
+      "breakable"
+    ],
+    "repairwith": [],
+    "createddate": "2015-01-10",
+    "updateddate": "2016-08-27"
+  },
+  {
+    "id": 6,
+    "displayname": "Zosis",
+    "name": "zosis",
+    "stacksize": 54,
+    "maxdurability": 78,
+    "enchantcategories": [],
+    "repairwith": [
+      "spruce_planks"
+    ],
+    "createddate": "2020-11-17",
+    "updateddate": "2016-03-26"
+  },
+  {
+    "id": 7,
+    "displayname": "Bovis",
+    "name": "bovis",
+    "stacksize": 62,
+    "maxdurability": 78,
+    "enchantcategories": [
+      "armor_head",
+      "armor_head"
+    ],
+    "repairwith": [
+      "birch_planks",
+      "jungle_planks"
+    ],
+    "createddate": "2016-12-09",
+    "updateddate": null
+  },
+  {
+    "id": 8,
+    "displayname": "Evidends",
+    "name": "evidends",
+    "stacksize": 39,
+    "maxdurability": 90,
+    "enchantcategories": [
+      "breakable"
+    ],
+    "repairwith": [
+      "jungle_planks",
+      "spruce_planks"
+    ],
+    "createddate": "2020-07-06",
+    "updateddate": null
+  },
+  {
+    "id": 9,
+    "displayname": "Vidto",
+    "name": "vidto",
+    "stacksize": 50,
+    "maxdurability": 116,
+    "enchantcategories": [
+      "breakable"
+    ],
+    "repairwith": [
+      "spruce_planks",
+      "warped_planks"
+    ],
+    "createddate": "2020-04-09",
+    "updateddate": null
+  },
+  {
+    "id": 10,
+    "displayname": "Xiix",
+    "name": "xiix",
+    "stacksize": 59,
+    "maxdurability": 33,
+    "enchantcategories": [
+      "armor_head",
+      "armor_chest",
+      "armor_head"
+    ],
+    "repairwith": [],
+    "createddate": "2014-02-25",
+    "updateddate": null
+  },
+  {
+    "id": 11,
+    "displayname": "Netagy",
+    "name": "netagy",
+    "stacksize": 5,
+    "maxdurability": 16,
+    "enchantcategories": [
+      "breakable",
+      "breakable"
+    ],
+    "repairwith": [],
+    "createddate": "2020-04-30",
+    "updateddate": "2020-07-29"
+  },
+  {
+    "id": 12,
+    "displayname": "Neurocell",
+    "name": "neurocell",
+    "stacksize": 45,
+    "maxdurability": 25,
+    "enchantcategories": [],
+    "repairwith": [
+      "jungle_planks"
+    ],
+    "createddate": "2019-06-17",
+    "updateddate": "2014-11-23"
+  },
+  {
+    "id": 13,
+    "displayname": "Rodeology",
+    "name": "rodeology",
+    "stacksize": 55,
+    "maxdurability": 112,
+    "enchantcategories": [
+      "armor_chest"
+    ],
+    "repairwith": [
+      "warped_planks",
+      "dark_oak_planks"
+    ],
+    "createddate": "2019-02-08",
+    "updateddate": "2022-02-24"
+  },
+  {
+    "id": 14,
+    "displayname": "Telequiet",
+    "name": "telequiet",
+    "stacksize": 38,
+    "maxdurability": 125,
+    "enchantcategories": [
+      "armor"
+    ],
+    "repairwith": [
+      "oak_planks"
+    ],
+    "createddate": "2019-11-02",
+    "updateddate": null
+  },
+  {
+    "id": 15,
+    "displayname": "Memora",
+    "name": "memora",
+    "stacksize": 37,
+    "maxdurability": 1,
+    "enchantcategories": [
+      "armor_head",
+      "armor_head",
+      "weapon"
+    ],
+    "repairwith": [
+      "birch_planks",
+      "birch_planks"
+    ],
+    "createddate": "2021-10-01",
+    "updateddate": null
+  },
+  {
+    "id": 16,
+    "displayname": "Chillium",
+    "name": "chillium",
+    "stacksize": 25,
+    "maxdurability": 35,
+    "enchantcategories": [
+      "armor_head",
+      "armor_chest"
+    ],
+    "repairwith": [
+      "spruce_planks",
+      "birch_planks"
+    ],
+    "createddate": "2020-12-15",
+    "updateddate": "2018-03-01"
+  },
+  {
+    "id": 17,
+    "displayname": "Peticular",
+    "name": "peticular",
+    "stacksize": 40,
+    "maxdurability": 2,
+    "enchantcategories": [
+      "armor_chest",
+      "armor_head",
+      "digger"
+    ],
+    "repairwith": [],
+    "createddate": "2021-02-13",
+    "updateddate": null
+  },
+  {
+    "id": 18,
+    "displayname": "Liquicom",
+    "name": "liquicom",
+    "stacksize": 27,
+    "maxdurability": 80,
+    "enchantcategories": [
+      "armor",
+      "armor_head"
+    ],
+    "repairwith": [
+      "jungle_planks"
+    ],
+    "createddate": "2015-03-10",
+    "updateddate": "2019-07-20"
+  },
+  {
+    "id": 19,
+    "displayname": "Strezzo",
+    "name": "strezzo",
+    "stacksize": 30,
+    "maxdurability": 114,
+    "enchantcategories": [
+      "armor_head"
+    ],
+    "repairwith": [
+      "oak_planks",
+      "jungle_planks"
+    ],
+    "createddate": "2020-04-14",
+    "updateddate": "2020-10-13"
+  },
+  {
+    "id": 20,
+    "displayname": "Ronbert",
+    "name": "ronbert",
+    "stacksize": 11,
+    "maxdurability": 87,
+    "enchantcategories": [
+      "armor",
+      "armor",
+      "armor_head"
+    ],
+    "repairwith": [
+      "acacia_planks"
+    ],
+    "createddate": "2016-02-04",
+    "updateddate": "2019-05-21"
+  },
+  {
+    "id": 21,
+    "displayname": "Tasmania",
+    "name": "tasmania",
+    "stacksize": 45,
+    "maxdurability": 106,
+    "enchantcategories": [
+      "digger"
+    ],
+    "repairwith": [
+      "warped_planks"
+    ],
+    "createddate": "2018-04-12",
+    "updateddate": "2014-10-12"
+  }
+]
