@@ -1,0 +1,37 @@
+﻿@using BlazorT.Composants
+<tr class="item"
+    ondragover="event.preventDefault();"
+    draggable="true"
+    @ondragstart="@OnDragStart"
+    @ondrop="@OnDrop"
+    @ondragenter="@OnDragEnter"
+    @ondragleave="@OnDragLeave">
+    <td>
+        @Item.Id
+    </td>
+    <td>
+        <DisplayTemplate>
+            @if (!string.IsNullOrWhiteSpace(Item.ImageBase64))
+            {
+                <img src="data:image/png;base64, @(Item.ImageBase64)" class="img-thumbnail" title="@Item.DisplayName" alt="@Item.DisplayName" style="min-width: 50px; max-width: 150px" />
+            }
+            else
+            {
+                <img src="images/default.png" class="img-thumbnail" title="@Item.DisplayName" alt="@Item.DisplayName" style="max-width: 150px" />
+            }
+        </DisplayTemplate>
+    </td>
+    <td>
+        @if (Item != null)
+        {
+            @Item.DisplayName
+        }
+    </td>
+    <td>
+        @if (Item != null)
+        {
+            @Item.CreatedDate
+        }
+    </td>
+
+</tr>

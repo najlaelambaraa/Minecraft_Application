@@ -1,0 +1,68 @@
+﻿<CascadingValue Value="@this">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div>My ìnventory</div>
+
+                <div>
+
+                    <div class="css-recipe">
+                        @for (int i = 0; i < NombreRecipes; i++)
+                        {
+                            <InventoryItem Index="@i"  />
+                        }
+
+
+                    </div>
+                </div>
+
+                <div>Result</div>
+                <div>
+                    <InventoryItem Item="RecipeResult" />
+                </div>
+            </div>
+            <div class="col-6">
+
+                <div>LES ELEMENTS DISPO:</div>
+                <input type="text" bind-value="searchValue" onchange="@onSearching" />
+                <div>
+                    <div class="css-grid">
+
+
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>IMAGE</th>
+                                    <th>NAME</th>
+                                    <th>DATE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <Virtualize Items="@Items" Context="item">
+
+                                    <InventoryItemTR Item="item" NoDrop="true" />
+
+                                </Virtualize>
+                            </tbody>
+                        </table>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="col-12">
+                <div>Actions</div>
+                <div class="actions" id="actions">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</CascadingValue>

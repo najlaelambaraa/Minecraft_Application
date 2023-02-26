@@ -1,0 +1,16 @@
+﻿
+<div class="item"
+     ondragover="event.preventDefault();"
+     draggable="true"
+     @ondragstart="@OnDragStart"
+     @ondrop="@OnDrop"
+     @ondragenter="@OnDragEnter"
+     @ondragleave="@OnDragLeave">
+    
+    (@Count)
+    @if (Item != null)
+    {
+        @Item.DisplayName
+    }
+
+</div>
