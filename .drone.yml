@@ -18,7 +18,13 @@ steps:
       - dotnet build Solution.sln -c Release --no-restore
       - dotnet publish Solution.sln -c Release --no-restore -o CI_PROJECT_DIR/build/release
 
- 
+   - name: tests
+    image: mcr.microsoft.com/dotnet/sdk:6.0
+    commands:
+      - cd Sources/
+      - dotnet restore MONAPI.sln
+      - dotnet test MONAPI.sln --no-restore
+    depends_on: [build]
 
   - name: code-analysis
     image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dronesonarplugin-dotnet6
