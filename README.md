@@ -32,9 +32,6 @@ La page consiste à placer sur l'inventory des blocs à partie de la liste des e
 
 
 
-
-
-
 Affichage principal(/inventory) | Page d'ajout(/Add)
 :-: | :-:
 <img src="Images/mineCraft.png" with=25%/>|<img src="Images/list.png" with=25%/>
@@ -45,6 +42,13 @@ Affichage principal(/inventory) | Page d'ajout(/Add)
 Modification d'un Item | Supression avec notification
 :-: | :-:
 <img src="Images/modif.png" with=25%/>|<img src="Images/sup.png" with=25%/>
+
+
+
+Page inventory | Suite
+:-: | :-:
+<video src='Images/V1(1).mp4' width=180/> | <video src='Images/V2(1).mp4' width=180/>
+
 ## Technologies:
 ***
 La liste des technologies utilisées :
