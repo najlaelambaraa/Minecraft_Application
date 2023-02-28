@@ -18,7 +18,10 @@ public class ErrorModel : PageModel
     {
         _logger = logger;
     }
-
+    ///<summary>
+    ///une méthode de la classe Razor PageModel et est utilisé pour gérer les requêtes GET vers la page associée
+    /// </summary>
+    
     public void OnGet()
     {
         RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
