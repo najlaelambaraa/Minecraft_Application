@@ -27,8 +27,10 @@ La page consiste à placer sur l'inventory des blocs à partie de la liste des e
 * Visualisation des données avec pagination
 * Edition d'un élement avec validation
 * Ajout d'un élement avec validation 
-<img src="https://codefirst.iut.uca.fr/git/najlae.lambaraa/BlazorApp/src/branch/doc/Documentation/doc_images/mineCraft.png" width="50%" height="50%">
-<img src="https://codefirst.iut.uca.fr/git/najlae.lambaraa/BlazorApp/src/branch/doc/Documentation/doc_images/list.png" width="50%" height="50%">
+
+
+<img src="Images/mineCraft.png" with=25%/>
+<img src="Images/list.png" with=25%/>
 
 ## Technologies:
 ***
