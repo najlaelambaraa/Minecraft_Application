@@ -6,20 +6,13 @@
                 <div>Available items:</div>
                 <div>
                     <div class="css-grid">
-                        <table>
+                    
                              @foreach (var item in Items)
                         {
-                                <tr>
-                                    <td>
-                                        {item}
-                                    </td>
-                                <td>
+                               
 <CraftingItem Item="item" NoDrop="true" />
-                                </td>
-                            </tr>
-                            
-                        }
-                        </table>
+                               
+                        } 
                        
                     </div>
                 </div>
