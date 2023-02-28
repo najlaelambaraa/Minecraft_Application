@@ -2,5 +2,10 @@
 @using System.Globalization
 @using BlazorT.Composants
 <div>
+    <NavLink class="btn btn-primary" href="Add" Match="NavLinkMatch.All">
+        <i class="fa fa-plus"></i> Ajouter
+    </NavLink>
+</div>
+<div>
     <InventoryComponent Items="Items" Recipes="Recipes" NombreRecipes="NombreRecipes" />
 </div>

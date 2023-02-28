@@ -28,6 +28,10 @@
     <None Remove="BlazorGrid" />
     <None Remove="BlazorTable" />
     <None Remove="SmartishTable" />
+    <None Remove="BlazorStrap.Extensions.BSDataTable" />
+    <None Remove="BlazorStrap" />
+    <None Remove="BlazorStrap.V5" />
+    <None Remove="TechFlurry.Sve.Blazor.DataTable" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -50,6 +54,10 @@
     <PackageReference Include="BlazorGrid" Version="1.1.0" />
     <PackageReference Include="SmartishTable" Version="1.1.0" />
     <PackageReference Include="BlazorTable" Version="1.17.0" />
+    <PackageReference Include="BlazorStrap.Extensions.BSDataTable" Version="1.5.1" />
+    <PackageReference Include="BlazorStrap" Version="5.1.100" />
+    <PackageReference Include="BlazorStrap.V5" Version="5.1.100" />
+    <PackageReference Include="TechFlurry.Sve.Blazor.DataTable" Version="5.0.0-alpha" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\images\" />

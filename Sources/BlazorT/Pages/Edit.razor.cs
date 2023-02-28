@@ -74,7 +74,7 @@ private async void HandleValidSubmit()
 {
     await DataService.Update(Id, itemModel);
 
-    NavigationManager.NavigateTo("list");
+    NavigationManager.NavigateTo("inventory");
 }
 
 private async Task LoadImage(InputFileChangeEventArgs e)

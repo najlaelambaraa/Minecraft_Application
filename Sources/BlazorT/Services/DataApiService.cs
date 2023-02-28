@@ -5,10 +5,9 @@ using BlazorT.Models;
 namespace BlazorT.Services;
 public class DataApiService : IDataService
 {
-    private readonly HttpClient _http;
-
+    private readonly HttpClient _http; 
     public DataApiService(
-        HttpClient http)
+        HttpClient http )
     {
         _http = http;
     }
