@@ -33,7 +33,10 @@ namespace BlazorT.Composants
 
         [Inject]
         public NavigationManager NavigationManager { get; set; }
-
+        /// <summary>
+        /// Gère l'événement de glisser-déposer lorsqu'un élément est glissé sur la case.
+        /// Ajoute une action d'inventaire pour enregistrer l'événement.
+        /// </summary>
         internal void OnDragEnter()
         {
             if (NoDrop)
@@ -45,6 +48,10 @@ namespace BlazorT.Composants
             Parent.Actions.Add(new InventoryAction { Action = "Drag Enter", Item = this.Item, Index = this.Index });
         }
 
+        /// <summary>
+        /// Gère l'événement de glisser-déposer lorsqu'un élément est glissé hors de la case.
+        /// Ajoute une action d'inventaire pour enregistrer l'événement.
+        /// </summary>
         internal void OnDragLeave()
         {
             if (NoDrop)
@@ -57,6 +64,10 @@ namespace BlazorT.Composants
             Parent.Actions.Add(new InventoryAction { Action = "Drag Leave", Item = this.Item, Index = this.Index });
         }
 
+        /// <summary>
+        /// Gère l'événement de glisser-déposer lorsqu'un élément est déposé sur la case.
+        /// Ajoute une action d'inventaire pour enregistrer l'événement, met à jour l'élément de la case et vérifie si une recette est possible.
+        /// </summary>
         internal void OnDrop()
         {
             if (NoDrop)
@@ -77,6 +88,10 @@ namespace BlazorT.Composants
             Parent.CheckRecipe();
         }
 
+        /// <summary>
+        /// Gère l'événement de glisser-déposer lorsqu'un élément est déplacé.
+        /// Ajoute une action d'inventaire pour enregistrer l'événement.
+        /// </summary>
         private void OnDragStart()
         {
             Parent.CurrentDragItem = this.Item;
@@ -85,7 +100,12 @@ namespace BlazorT.Composants
             Parent.Actions.Add(new InventoryAction { Action = "Drag Start", Item = this.Item, Index = this.Index });
         }
 
-
+        /// <summary>
+        /// Gère l'événement de suppression d'un élément.
+        /// Affiche une fenêtre modale de confirmation et supprime l'élément s'il est confirmé.
+        /// Ajoute une action d'inventaire pour enregistrer l'événement et recharge la page.
+        /// </summary>
+        /// <param name="id">ID de l'élément à supprimer</param>
         private async Task OnDeleteAsync(int id)
         {
             var parameters = new ModalParameters();
@@ -105,6 +125,7 @@ namespace BlazorT.Composants
             // Reload the page
             NavigationManager.NavigateTo("inventory", true);
         }
+
 
     }
 }
