@@ -68,6 +68,11 @@ public partial class List
             await LocalStorage.SetItemAsync("data", originalData);
         }
     }
+    /// <summary>
+    ///  méthode asynchrone qui gère la suppression d'un élément dans la liste. Elle prend en paramètre l'ID de l'élément à supprimer.
+    
+    /// </summary>
+     
 
     private async Task OnDeleteAsync(int id)
     {

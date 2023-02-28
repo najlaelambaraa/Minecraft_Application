@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.AccessControl;
 using BlazorT.Composants;
 using BlazorT.Models;
 using BlazorT.Services;
@@ -19,6 +20,12 @@ public partial class Inventory
     [Inject]
     public IConfiguration Configuration { set; get; }
 
+    ///<summary>
+    /// une méthode asynchrone de cycle de vie appelée OnAfterRenderAsync, qui est exécutée après le rendu initial de la page ou du composant. 
+     /// La méthode commence par appeler la version de la méthode de cycle de vie parente avec l'instruction base.OnAfterRenderAsync (firstRender)
+     
+    ///</summary>
+    
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         base.OnAfterRenderAsync(firstRender);
