@@ -1,68 +1,52 @@
-﻿<CascadingValue Value="@this">
+﻿@using BlazorT.Models;
+@using BlazorT.Composants 
+<CascadingValue Value="@this">
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <div>My ìnventory</div>
+                <div><h2>My ìnventory</h2></div>
 
                 <div>
 
                     <div class="css-recipe">
                         @for (int i = 0; i < NombreRecipes; i++)
                         {
-                            <InventoryItem Index="@i"  />
+                            <InventoryItem Index="@i" />
                         }
 
 
                     </div>
                 </div>
-
-                <div>Result</div>
-                <div>
-                    <InventoryItem Item="RecipeResult" />
-                </div>
+ 
             </div>
             <div class="col-6">
 
-                <div>LES ELEMENTS DISPO:</div>
-                <input type="text" bind-value="searchValue" onchange="@onSearching" />
-                <div>
-                    <div class="css-grid">
 
 
-
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>IMAGE</th>
-                                    <th>NAME</th>
-                                    <th>DATE</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <Virtualize Items="@Items" Context="item">
-
-                                    <InventoryItemTR Item="item" NoDrop="true" />
-
-                                </Virtualize>
-                            </tbody>
-                        </table>
-
-
-
-                    </div>
+                <div><h2>LES ELEMENTS DISPONIBLES:</h2></div>
+               
+                <div class="@BS.Input_Group mb-2">
+                    <span class="@BS.Input_Group_Text">RECHERCHE</span>
+                    <BSInput   placeholder="By name" Value="searchValue" ValueChanged="(string e) => onSearching(e)" UpdateOnInput="true" />
                 </div>
+                <BSDataTable @ref="_customFilterRef" FetchItems="FetchItems" PaginationBottom="true" StartPage="1" RowsPerPage="20" Context="item" Items="Items" IsResponsive="true" IsStriped="true">
+                    <Header>
+                        <BSDataTableHead TValue="Item" Sortable="true" Column="@(nameof(Item.Id))">Id</BSDataTableHead>
+                        <BSDataTableHead TValue="Item" Sortable="true" Column="@(nameof(Item.ImageBase64))" ColumnFilter="false">Image</BSDataTableHead>
 
+                        <BSDataTableHead TValue="Item" Sortable="true" Column="@(nameof(Item.Name))" ColumnFilter="true">Name</BSDataTableHead>
+                        <BSDataTableHead  TValue="Item" Sortable="false"  >Action</BSDataTableHead>
+                    </Header>
+                    <Body>
+                        <InventoryItemTR Item="item" />
+                    </Body>
+                </BSDataTable>
             </div>
 
 
-
-            <div class="col-12">
-                <div>Actions</div>
-                <div class="actions" id="actions">
-
-                </div>
-            </div>
+ 
         </div>
     </div>
+
+
 </CascadingValue>

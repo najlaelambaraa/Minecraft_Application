@@ -74,7 +74,7 @@ public partial class Add
         // Save the data
         await LocalStorage.SetItemAsync("data", currentData);
 
-        NavigationManager.NavigateTo("list"); // redirection
+        NavigationManager.NavigateTo("inventory"); // redirection
     }
 
     private async Task LoadImage(InputFileChangeEventArgs e)

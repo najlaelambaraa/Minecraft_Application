@@ -7,13 +7,13 @@
 
 .css-recipe {
     grid-template-columns: repeat(3,minmax(0,1fr));
-    gap: 10px;
+    gap: 15px;
     display: grid;
-    width: 212px;
+    width: 220px;
 }
 
 .actions {
     border: 1px solid black;
-    height: 250px;
+    height: 253px;
     overflow: scroll;
 }

@@ -1,15 +1,18 @@
 ﻿@using BlazorT.Composants
-<tr class="item"
-    ondragover="event.preventDefault();"
-    draggable="true"
-    @ondragstart="@OnDragStart"
-    @ondrop="@OnDrop"
-    @ondragenter="@OnDragEnter"
-    @ondragleave="@OnDragLeave">
-    <td>
+@using BlazorT.Models;
+@using BlazorStrap.V5
+
+ 
+<BSDataTableRow ondragover="event.preventDefault();"
+                draggable="true"
+                @ondragstart="@OnDragStart"
+                @ondrop="@OnDrop"
+                @ondragenter="@OnDragEnter"
+                @ondragleave="@OnDragLeave">
+    <BSTD>
         @Item.Id
-    </td>
-    <td>
+    </BSTD>
+    <BSTD>
         <DisplayTemplate>
             @if (!string.IsNullOrWhiteSpace(Item.ImageBase64))
             {
@@ -20,18 +23,15 @@
                 <img src="images/default.png" class="img-thumbnail" title="@Item.DisplayName" alt="@Item.DisplayName" style="max-width: 150px" />
             }
         </DisplayTemplate>
-    </td>
-    <td>
-        @if (Item != null)
-        {
-            @Item.DisplayName
-        }
-    </td>
-    <td>
-        @if (Item != null)
-        {
-            @Item.CreatedDate
-        }
-    </td>
+    </BSTD>
+    <BSTD>
+        @Item.Name
+    </BSTD>
+    <BSTD>
+        <DisplayTemplate>
+            <a href="Edit/@(Item.Id)" class="btn btn-primary"><i class="fa fa-edit"></i> Editer</a>
+            <button type="button" class="btn btn-primary" @onclick="() => OnDeleteAsync(Item.Id)"><i class="fa fa-trash"></i> Supprimer</button>
+        </DisplayTemplate>
+    </BSTD>
 
-</tr>
+</BSDataTableRow>

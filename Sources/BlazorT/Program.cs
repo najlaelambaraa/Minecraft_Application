@@ -10,6 +10,7 @@ using Blazored.Modal;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using Microsoft.Extensions.Options;
+using BlazorStrap;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,8 +36,7 @@ builder.Services.AddControllers();
 
 // Add the localization to the app and specify the resources path
 builder.Services.AddLocalization(opts => { opts.ResourcesPath = "Resources"; });
-
-// Configure the localtization
+ // Configure the localtization
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
     // Set the default culture of the web site
@@ -46,6 +46,12 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.SupportedCultures = new List<CultureInfo> { new CultureInfo("en-US"), new CultureInfo("fr-FR") };
     options.SupportedUICultures = new List<CultureInfo> { new CultureInfo("en-US"), new CultureInfo("fr-FR") };
 });
+builder.Services.AddBlazorStrap();
+
+
+builder.Services.AddSingleton<ILoggerFactory, LoggerFactory>();
+builder.Services.AddSingleton(typeof(ILogger<>), typeof(Logger<>));
+builder.Services.AddLogging((builder) => builder.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace));
 
 var app = builder.Build();
 
@@ -59,9 +65,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
-
-app.UseRouting();
+ ;
 
 
 // Get the current localization options
@@ -74,14 +78,18 @@ if (options?.Value != null)
 }
 
 // Add the controller to the endpoint
+ 
+app.UseStaticFiles();
+
+app.UseRouting();
+
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
+    endpoints.MapBlazorHub();
+    endpoints.MapFallbackToPage("/_Host");
 });
-
-
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
-
+ 
+//app.MapFallbackToFile("Pages/Inventory.razor");
 app.Run();
 

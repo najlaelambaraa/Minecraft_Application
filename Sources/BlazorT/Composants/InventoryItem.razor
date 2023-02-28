@@ -1,16 +1,32 @@
-﻿
-<div class="item"
+﻿@using BlazorStrap.V5
+<div class="item "
      ondragover="event.preventDefault();"
      draggable="true"
      @ondragstart="@OnDragStart"
      @ondrop="@OnDrop"
      @ondragenter="@OnDragEnter"
      @ondragleave="@OnDragLeave">
-    
-    (@Count)
-    @if (Item != null)
-    {
-        @Item.DisplayName
-    }
+    <span class="text-info" style="font-size:x-small">
+       
+        @if (Item != null)
+        {
+            @Item.DisplayName
+        }
+    </span>
+    <DisplayTemplate>
+        @if (@Item != null)
+        {
+            <img src="data:image/png;base64, @(Item.ImageBase64)" class="img-thumbnail" title="@Item.DisplayName" alt="@Item.DisplayName" style="min-width: 50px; max-width: 50px" />
+        }
+        else
+        {
+            <img src="images/default.png" class="img-thumbnail" style="max-width: 50px" />
+        }
+        <span class="text-success">
+            (@Count)
+        </span>
+    </DisplayTemplate>
+     
+   
 
 </div>

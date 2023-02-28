@@ -1,15 +1,17 @@
 ﻿using System;
 using BlazorT.Composants;
 using BlazorT.Models;
+using Microsoft.Extensions.Logging;
 
 namespace BlazorT.Services;
 public class InventoryDataService : IInventoryDataService
 {
     private readonly HttpClient _http;
-
+    private ILogger<InventoryDataService> _logger;
     public InventoryDataService(
-        HttpClient http)
+        HttpClient http,ILogger<InventoryDataService> logger )
     {
+        _logger =  logger;
         _http = http;
     }
 
@@ -17,6 +19,8 @@ public class InventoryDataService : IInventoryDataService
     {
         // Get the item
         var item = ItemFactory.Create(model);
+
+        _logger.LogInformation($"Creating Element with id....... <{item.Name}>");
 
         // Save the data
         await _http.PostAsJsonAsync("https://localhost:7234/api/Crafting/", item);
@@ -29,11 +33,14 @@ public class InventoryDataService : IInventoryDataService
 
     public async Task<List<Item>> List(int currentPage, int pageSize)
     {
+        _logger.LogInformation($".......List fetching........ <{currentPage}>;<{pageSize}>");
         return await _http.GetFromJsonAsync<List<Item>>($"https://localhost:7234/api/Crafting/?currentPage={currentPage}&pageSize={pageSize}");
     }
 
     public async Task<Item> GetById(int id)
     {
+        _logger.LogInformation($"Element with id....... <{id}>");
+
         return await _http.GetFromJsonAsync<Item>($"https://localhost:7234/api/Crafting/{id}");
     }
 
@@ -41,12 +48,15 @@ public class InventoryDataService : IInventoryDataService
     {
         // Get the item
         var item = ItemFactory.Create(model);
+        _logger.LogInformation($"Update ---- Element with id....... <{id}>");
 
         await _http.PutAsJsonAsync($"https://localhost:7234/api/Crafting/{id}", item);
     }
 
     public async Task Delete(int id)
     {
+        _logger.LogInformation($"Deleting Element with id....... <{id}>");
+
         await _http.DeleteAsync($"https://localhost:7234/api/Crafting/{id}");
     }
 
