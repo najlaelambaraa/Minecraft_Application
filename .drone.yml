@@ -53,8 +53,8 @@ steps:
       - name: docs
         path: /docs
     commands:
-      #- cd Documentation/doxygen
-      #- doxygen Doxyfile
+      - cd Documentation/doxygen
+      - doxygen Doxyfile
       - /entrypoint.sh
     when:
       branch:
