@@ -22,7 +22,9 @@
 ***
 C'est une application Minecraft réalisée avec Blazor,c'est un jeu qui consiste à placer ou en supprimant des blocs représentant différents matériaux comme de la terre, du sable, de la pierre, de l'eau, de la lave ou des minerais à partir d'une listes pour construire des structures, des outils et des armes.
 ### Capture d'écran:
-![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+![Image text](https://codefirst.iut.uca.fr/git/najlae.lambaraa/BlazorApp/src/branch/doc/Documentation/doc_images/mineCraft.png)
+La page consite à placer sur l'inventory des blocs à partie de la liste des elements,on peux aussi ajouter ou modifier ou supprimer des elemets de la liste
+![Image text](https://codefirst.iut.uca.fr/git/najlae.lambaraa/BlazorApp/src/branch/doc/Documentation/doc_images/list.png)
 ## Technologies:
 ***
 La liste des technologies utilisées :
