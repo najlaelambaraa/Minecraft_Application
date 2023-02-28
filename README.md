@@ -47,7 +47,7 @@ Modification d'un Item | Supression avec notification
 
 Page inventory | Suite
 :-: | :-:
-<video src='Images/V1(1).mp4' width=180> <a href="Images/V1(1).mp4">Page Inventory</a> <video/> | <video src='Images/V2(1).mp4' width=180> <a href="Images/V2(1).mp4">Page Inventory (suite)</a> <video/> 
+<video src='Images/V1(1).mp4' width=180> <a href="https://codefirst.iut.uca.fr/git/najlae.lambaraa/BlazorApp/src/branch/master/Images/V1(1).mp4">Page Inventory</a> <video/> | <video src='Images/V2(1).mp4' width=180> <a href="https://codefirst.iut.uca.fr/git/najlae.lambaraa/BlazorApp/src/branch/master/Images/V2(1).mp4">Page Inventory (suite)</a> <video/> 
 
 ## Technologies:
 ***
