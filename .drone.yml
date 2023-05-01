@@ -37,7 +37,6 @@ steps:
       - reportgenerator -reports:"**/coverage.cobertura.xml" -reporttypes:SonarQube -targetdir:"coveragereport"
       - dotnet publish Solution.sln -c Release --no-restore -o $CI_PROJECT_DIR/build/release
       - dotnet sonarscanner end /d:sonar.login=$$$${PLUGIN_SONAR_TOKEN}
-
     secrets: [ SECRET_SONAR_BLAZOR ]
     settings:
       # accessible en ligne de commande par ${PLUGIN_SONAR_HOST}
@@ -45,7 +44,7 @@ steps:
       # accessible en ligne de commande par ${PLUGIN_SONAR_TOKEN}
       sonar_token:
         from_secret: SECRET_SONAR_BLAZOR
-    depends_on: [tests]
+    depends_on: [build]
 
   - name: generate-and-deploy-docs
     image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-docdeployer
